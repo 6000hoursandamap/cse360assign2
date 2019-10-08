@@ -4,7 +4,7 @@ package cse360assign2;
  * 	Assignment 2
  *  AddingMachine class performs basic arithmetic to a "total"
  *  URL to Repo:
- *  
+ *  https://github.com/6000hoursandamap/cse360assign2
  */
 public class AddingMachine {
 
