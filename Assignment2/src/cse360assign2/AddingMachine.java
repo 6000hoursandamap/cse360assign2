@@ -13,12 +13,6 @@ public class AddingMachine {
 	 */
 	private int total;
 	
-	
-	/*
-	 * String to keep track of history with initial value 0
-	 */
-	private String history = "0"; 
-	
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
 	}
@@ -28,7 +22,7 @@ public class AddingMachine {
 	 * @return the current total
 	 */
 	public int getTotal () {
-		return total;
+		return 0;
 	}
 	
 	
@@ -37,8 +31,7 @@ public class AddingMachine {
 	 * @param value The value added on total
 	 */
 	public void add (int value) {
-		total = total + value;
-		history = history.concat(" + " + value);
+		
 	}
 	
 	
@@ -47,24 +40,22 @@ public class AddingMachine {
 	 * @param value The value subracted form total
 	 */
 	public void subtract (int value) {
-		total = total - value;
-		history = history.concat(" - " + value);
+		
 	}
 		
 	
 	/**
 	 * Returns the history, with spaces in-between the values
-	 * @return history String of all recroded actions
+	 * @return history String of all recoded actions
 	 */
 	public String toString () {
-		return history;
+		return "";
 	}
 	
 	/**
 	 * User has the option to 'clear' data, resetting total and history
 	 */
 	public void clear() {
-		history = "0";
-		total = 0;
+		
 	}
 }
