@@ -1,31 +1,70 @@
 package cse360assign2;
-
+/**
+ * 	Author: Oscar Veloria Jr.
+ * 	Assignment 2
+ *  AddingMachine class performs basic arithmetic to a "total"
+ *  URL to Repo:
+ *  
+ */
 public class AddingMachine {
 
+	/**
+	 * The total to perform arithmetic on, subtract or add
+	 */
 	private int total;
+	
+	
+	/*
+	 * String to keep track of history with initial value 0
+	 */
+	private String history = "0"; 
 	
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
-		int tile = 4;
 	}
 	
+	/**
+	 * Gets the total
+	 * @return the current total
+	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
+	
+	/**
+	 * Adds a value to the total, and records the addition in history
+	 * @param value The value added on total
+	 */
 	public void add (int value) {
-		
+		total = total + value;
+		history = history.concat(" + " + value);
 	}
 	
+	
+	/**
+	 * Subtracts a value from the total, and records the subtraction in history
+	 * @param value The value subracted form total
+	 */
 	public void subtract (int value) {
-		
+		total = total - value;
+		history = history.concat(" - " + value);
 	}
 		
-	public String toString () {
-		return "";
-	}
-
-	public void clear() {
 	
+	/**
+	 * Returns the history, with spaces in-between the values
+	 * @return history String of all recroded actions
+	 */
+	public String toString () {
+		return history;
+	}
+	
+	/**
+	 * User has the option to 'clear' data, resetting total and history
+	 */
+	public void clear() {
+		history = "0";
+		total = 0;
 	}
 }
